@@ -1,0 +1,24 @@
+[
+  {
+    "projectTitle": "Party Link",
+    "projectDescription": "Projeto feito em equipe composta por 5 devs onde o problema que propomos resolver era a dificuldade em encontrar comapnheiros para fazer missões coletivas em equipe missões essas que são de grande valor para os jogadores do jogo.",
+    "projeectTechs": ["NextJS", "TailwindCSS", "Firebase"],
+    "projectImg": "/party-link.png",
+    "projectLink": "https://party-link-2g7w9wplc-party-link.vercel.app/",
+    "solo": false
+  },
+  {
+    "projectTitle": "Hamburgeria",
+    "projectDescription": "Projeto feito com a proposta de simular um menu online onde poder ser feito pedidos de um restaurante com tema de hamburgeria",
+    "projeectTechs": ["ReactJS"],
+    "projectLink": "https://kenzie-hamburgeria-b14edxer2-jhonatas-matheus.vercel.app/",
+    "projectImg": "/hamburgeria.png",
+    "solo": true
+  },
+  {
+    "projectTitle": "Party Link",
+    "projectDescription": "Projeto feito em equipe composta por 5 devs onde o problema que propomos resolver era a dificuldade em encontrar comapnheiros para fazer missões coletivas em equipe missões essas que são de grande valor para os jogadores do jogo.",
+    "projeectTechs": ["NextJS", "TailwindCSS", "Firebase"],
+    "projectLink": "https://party-link-2g7w9wplc-party-link.vercel.app/"
+  }
+]
