@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useRef } from "react";
 import CardProject from "./CardProject";
 import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
 import { SectionContext } from "../context/ContextSection";
@@ -11,8 +11,6 @@ const Projects = (props: Props) => {
     const intersectionObserver = new IntersectionObserver(
       (entries) => {
         if (entries.some((entry) => entry.isIntersecting)) {
-          console.log(entries);
-          console.log(entries[0].target.id);
           setCurrentSection("projects");
         }
       },
@@ -24,10 +22,17 @@ const Projects = (props: Props) => {
     //@ts-ignore eslint-disable-next-line
     intersectionObserver.observe(document.querySelectorAll("#projects")[1]);
   }, []);
+  const ref = useRef<any>(null);
+  const showNextProject = () => {
+    ref.current.scrollLeft += ref.current.offsetWidth + 16;
+  };
+  const showPreviousProject = () => {
+    ref.current.scrollLeft -= ref.current.offsetWidth + 16;
+  };
   return (
     <div
       id="projects"
-      className="flex flex-col bg-gray-one min-h-[50%]  w-full py-4 px-4 md:px-20 lg:px-40 2xl:px-80 box-border"
+      className="relative flex flex-col bg-gray-one min-h-[50%]  w-full py-4 px-4 md:px-20 lg:px-40 2xl:px-80 box-border"
     >
       <div className="flex flex-col space-y-1 items-center text-white mt-12">
         <h2 className="text-center">Projetos</h2>
@@ -39,18 +44,24 @@ const Projects = (props: Props) => {
         desenvolvedor até aqui.
       </p>
       <div className="flex justify-center gap-6 text-white w-full mt-4 text-sm text-center">
-        <button className="border border-white border-solid p-4 min-w-[30%]">
-          Projetos Individual
+        <button
+          className="border border-white border-solid p-4 min-w-[30%]"
+          onClick={showPreviousProject}
+          // disabled={ref.current.scrollLeft === 0 ? true : false}
+        >
+          Projeto Anterior
         </button>
-        <button className="border border-white border-solid p-4 min-w-[30%] ">
-          Projetos em Equipe
+        <button
+          className="border border-white border-solid p-4 min-w-[30%] "
+          onClick={showNextProject}
+        >
+          Projeto Seguinte
         </button>
       </div>
-      <div className="relative flex flex-row max-w-full overflow-x-auto gap-4 mt-4 ">
-        <BiLeftArrow
-          scale={50}
-          className="hidden lg:flex absolute top-[30%] z-[100] -left-10 text-white bg-blue-700 min-w-[20px]"
-        />
+      <div
+        className="flex flex-row max-w-full overflow-x-hidden gap-4 mt-4 scroll-smooth snap-mandatory "
+        ref={ref}
+      >
         {projects.map((project) => {
           return (
             <CardProject
@@ -63,10 +74,6 @@ const Projects = (props: Props) => {
             />
           );
         })}
-        <BiRightArrow
-          scale={50}
-          className="hidden lg:flex absolute top-[30%] z-[100] -right-10 text-white bg-blue-700 min-w-[20px]"
-        />
       </div>
     </div>
   );

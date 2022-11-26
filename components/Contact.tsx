@@ -10,8 +10,6 @@ const Contact = (props: Props) => {
     const intersectionObserver = new IntersectionObserver(
       (entries) => {
         if (entries.some((entry) => entry.isIntersecting)) {
-          console.log(entries);
-          console.log(entries[0].target.id);
           setCurrentSection("contact");
         }
       },

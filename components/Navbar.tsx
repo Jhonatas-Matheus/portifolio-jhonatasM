@@ -16,10 +16,18 @@ const Navbar = (props: Props) => {
   const { currentSection, setCurrentSection } =
     React.useContext(SectionContext);
   const scrollToLink = (e: any, id: string) => {
-    console.log(id);
     e.preventDefault();
     let element = document.querySelectorAll("#" + id)[1];
-    setCurrentSection(id);
+    // setCurrentSection(id);
+    element.scrollIntoView();
+  };
+  const scrollToLinkMobile = (e: any, id: string) => {
+    const trueId = id.split("2")[0];
+
+    e.preventDefault();
+    let element = document.querySelectorAll("#" + trueId)[1];
+
+    // setCurrentSection(id);
     element.scrollIntoView();
   };
   return (
@@ -143,56 +151,55 @@ const Navbar = (props: Props) => {
               currentSection === "home" ? "text-color-primary" : "text-white"
             }
           >
-            <Link href="/">Home</Link>
-            {/* <span
-              id="home"
-              onClick={(e) => scrollToLink(e, e.currentTarget.id)}
+            <span
+              id="home2"
+              onClick={(e) => scrollToLinkMobile(e, e.currentTarget.id)}
             >
               Inicio
-            </span> */}
+            </span>
           </li>
           <li
             className={
               currentSection === "aboutUs" ? "text-color-primary" : "text-white"
             }
           >
-            <Link href="/#aboutUs" scroll={true}>
+            {/* <Link href="/#aboutUs" scroll={true}>
               Sobre mim
-            </Link>
-            {/* <span
-              id="aboutUs"
-              onClick={(e) => scrollToLink(e, e.currentTarget.id)}
+            </Link> */}
+            <span
+              id="aboutUs2"
+              onClick={(e) => scrollToLinkMobile(e, e.currentTarget.id)}
             >
               Sobre mim
-            </span> */}
+            </span>
           </li>
           <li
             className={
               currentSection === "techs" ? "text-color-primary" : "text-white"
             }
           >
-            <Link href="/#techs" scroll={true}>
+            {/* <Link href="/#techs" scroll={true}>
               Tecnologias
-            </Link>
-            {/* <span
-              id="techs"
-              onClick={(e) => scrollToLink(e, e.currentTarget.id)}
+            </Link> */}
+            <span
+              id="techs2"
+              onClick={(e) => scrollToLinkMobile(e, e.currentTarget.id)}
             >
               Tecnologias
-            </span> */}
+            </span>
           </li>
           <li
             className={
               currentSection === "skills" ? "text-color-primary" : "text-white"
             }
           >
-            <Link href="/#skills">Habilidades</Link>
-            {/* <span
-              id="skills"
-              onClick={(e) => scrollToLink(e, e.currentTarget.id)}
+            {/* <Link href="/#skills">Habilidades</Link> */}
+            <span
+              id="skills2"
+              onClick={(e) => scrollToLinkMobile(e, e.currentTarget.id)}
             >
               Skills
-            </span> */}
+            </span>
           </li>
           <li
             className={
@@ -201,13 +208,13 @@ const Navbar = (props: Props) => {
                 : "text-white"
             }
           >
-            <Link href="/#projects">Projetos</Link>
-            {/* <span
-              id="projects"
-              onClick={(e) => scrollToLink(e, e.currentTarget.id)}
+            {/* <Link href="/#projects">Projetos</Link> */}
+            <span
+              id="projects2"
+              onClick={(e) => scrollToLinkMobile(e, e.currentTarget.id)}
             >
               Projetos
-            </span> */}
+            </span>
           </li>
           {/* <li
             className={currentSection === "contact" ? "text-color-primary" : "text-white"}

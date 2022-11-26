@@ -23,14 +23,12 @@ const Profrile = (props: Props) => {
     const intersectionObserver = new IntersectionObserver(
       (entries) => {
         if (entries.some((entry) => entry.isIntersecting)) {
-          console.log(entries);
-          console.log(entries[0].target.id);
           setCurrentSection("home");
         }
       },
       {
         // rootMargin: "48px",
-        threshold: [1],
+        threshold: [0.75],
       }
     );
     //@ts-ignore eslint-disable-next-line

@@ -16,9 +16,10 @@
     "solo": true
   },
   {
-    "projectTitle": "Party Link",
-    "projectDescription": "Projeto feito em equipe composta por 5 devs onde o problema que propomos resolver era a dificuldade em encontrar comapnheiros para fazer missões coletivas em equipe missões essas que são de grande valor para os jogadores do jogo.",
-    "projeectTechs": ["NextJS", "TailwindCSS", "Firebase"],
-    "projectLink": "https://party-link-2g7w9wplc-party-link.vercel.app/"
+    "projectTitle": "Miniblog",
+    "projectDescription": "Projeto feito com a proposta de simular uma pequena rede social onde as pessoas podem compartilhar imagens que acham bonitas.",
+    "projeectTechs": ["Typescript", "Styled-Components", "Firebase"],
+    "projectImg": "/miniblog.png",
+    "projectLink": "https://miniblog-with-typescript.vercel.app/"
   }
 ]
