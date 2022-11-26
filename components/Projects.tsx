@@ -4,8 +4,14 @@ import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
 import { SectionContext } from "../context/ContextSection";
 type Props = {};
 import projects from "../services/projects.json";
+import { useWindowSize } from "../hooks/useWindowsSize";
 
 const Projects = (props: Props) => {
+  const [width, height] = useWindowSize();
+  const ref = useRef<any>(null);
+  useEffect(() => {
+    ref.current.scrollLeft = ref.current.offsetWidth;
+  }, [width]);
   const { setCurrentSection } = useContext(SectionContext);
   useEffect(() => {
     const intersectionObserver = new IntersectionObserver(
@@ -22,7 +28,7 @@ const Projects = (props: Props) => {
     //@ts-ignore eslint-disable-next-line
     intersectionObserver.observe(document.querySelectorAll("#projects")[1]);
   }, []);
-  const ref = useRef<any>(null);
+
   const showNextProject = () => {
     ref.current.scrollLeft += ref.current.offsetWidth + 16;
   };

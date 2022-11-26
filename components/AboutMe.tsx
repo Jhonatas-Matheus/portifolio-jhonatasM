@@ -48,10 +48,7 @@ const AboutMe = (props: Props) => {
       id="aboutUs"
       className="flex flex-col bg-gray-two min-h-[50%] w-full py-4 px-4  md:px-20 lg:px-40 2xl:px-80 box-border "
     >
-      <div
-        className="flex flex-col space-y-1 items-center text-white mt-12"
-        data-aos="fade-right"
-      >
+      <div className="flex flex-col space-y-1 items-center text-white mt-12">
         <h2 className="text-center">Sobre mim</h2>
         <div className="border-solid border-b-2 border-color-primary w-10 min-h-2"></div>
         <div className="border-solid border-b-2 border-color-primary w-6 min-h-2"></div>

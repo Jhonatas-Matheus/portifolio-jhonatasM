@@ -21,5 +21,19 @@
     "projeectTechs": ["Typescript", "Styled-Components", "Firebase"],
     "projectImg": "/miniblog.png",
     "projectLink": "https://miniblog-with-typescript.vercel.app/"
+  },
+  {
+    "projectTitle": "TechsHub",
+    "projectDescription": "Projeto feito com intuito de simular um portifólio de tecnologias consumindo api externa com axios.",
+    "projeectTechs": [
+      "ReactJS",
+      "Typescript",
+      "Styled-Components",
+      "Axios",
+      "React Router Dom",
+      "Context API"
+    ],
+    "projectImg": "/techs-hub.png",
+    "projectLink": "https://techs-hub.vercel.app/"
   }
 ]
