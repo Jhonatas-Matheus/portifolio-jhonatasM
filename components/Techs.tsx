@@ -65,8 +65,6 @@ const Techs = (props: Props) => {
     const intersectionObserver = new IntersectionObserver(
       (entries) => {
         if (entries.some((entry) => entry.isIntersecting)) {
-          console.log(entries);
-          console.log(entries[0].target.id);
           setCurrentSection("techs");
         }
       },
@@ -151,8 +149,12 @@ const Techs = (props: Props) => {
             </motion.div>
           </motion.div>
         </div>
-        <a download href="/curriculo-jhonatas.pdf">
-          Download
+        <a
+          download
+          href="/curriculo-jhonatas.pdf"
+          className="border border-white border-solid p-4"
+        >
+          Download do currículo
         </a>
       </div>
     </div>
