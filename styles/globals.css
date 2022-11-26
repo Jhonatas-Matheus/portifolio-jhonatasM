@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Lato&family=Teko&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Lato&family=Teko&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 html,
 body,
 div,
@@ -136,8 +137,9 @@ body {
   box-sizing: border-box;
   height: 100vh;
   overflow-x: hidden;
-  font-family: "Grape Nuts", cursive;
+  /* font-family: "Grape Nuts", cursive; */
   /* font-family: "Lato", sans-serif; */
+  font-family: "Poppins", sans-serif;
   /* font-family: "Teko", sans-serif; */
   /* font-weight: 700; */
   /* scroll-behavior: smooth !important; */
