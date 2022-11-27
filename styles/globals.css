@@ -165,3 +165,16 @@ body {
     @apply relative w-full h-full;
   }
 }
+.animation-flip {
+  animation: teste 1s;
+}
+@keyframes teste {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
+/* image.current.style.transform = "rotate3d(0, 1, 0, 180deg)";
+    image.current.style.transitionDuration = "500ms"; */

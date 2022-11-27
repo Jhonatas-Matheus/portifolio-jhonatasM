@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import avatar from "../assets/avatar.png";
 //Icons
 import {
@@ -14,10 +14,13 @@ import Link from "next/link";
 import ProgressBar from "./ProgressBar";
 import AnimatedText from "./AnimatedText";
 import { SectionContext } from "../context/ContextSection";
+import { LenguageContext } from "../context/ContextLeanguage";
 type Props = {};
 
 const Profrile = (props: Props) => {
   const router = useRouter();
+  const { lenguage, setLenguage } = useContext(LenguageContext);
+
   const { setCurrentSection } = React.useContext(SectionContext);
   useEffect(() => {
     const intersectionObserver = new IntersectionObserver(
@@ -54,8 +57,13 @@ const Profrile = (props: Props) => {
               <AnimatedText text="JHONATAS MATHEUS" />{" "}
             </h2>
             <h3 className="font-Teko font-bold text-white">
-              <AnimatedText text="Desenvolvedor Front-End" />
-              {/* Desenvolvedor Front-End */}
+              <AnimatedText
+                text={
+                  lenguage === "english"
+                    ? "Front-End Web Developer"
+                    : "Desenvolvedor Web Front-End"
+                }
+              />
             </h3>
             <div className="flex space-x-4 ">
               <Link href="https://www.instagram.com/jhonndev/" target="_blank">

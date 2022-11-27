@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import React, { useContext } from "react";
+import { LenguageContext } from "../context/ContextLeanguage";
 import { ModalContext } from "../context/ContextModal";
 
 type Props = {
@@ -17,6 +18,7 @@ const CardProject = ({
   link: projectLink,
   image: projectImage,
 }: Props) => {
+  const { lenguage, setLenguage } = useContext(LenguageContext);
   const {
     setModalIsOpen,
     setDescriptionOfProject,
@@ -47,7 +49,7 @@ const CardProject = ({
           setModalIsOpen(true);
         }}
       >
-        Ver mais
+        {lenguage === "english" ? "View more" : "Ver mais"}
       </button>
     </div>
   );
