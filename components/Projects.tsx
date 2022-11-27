@@ -79,7 +79,11 @@ const Projects = (props: Props) => {
               title={project.projectTitle}
               image={project.projectImg ? project.projectImg : ""}
               techsUse={project.projeectTechs}
-              description={project.projectDescription}
+              description={
+                lenguage === "english"
+                  ? project.projectDescriptionEn
+                  : project.projectDescription
+              }
               link={project.projectLink}
               key={project.projectTitle}
             />

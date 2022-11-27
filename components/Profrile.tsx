@@ -17,6 +17,7 @@ import ProgressBar from "./ProgressBar";
 import AnimatedText from "./AnimatedText";
 import { SectionContext } from "../context/ContextSection";
 import { LenguageContext } from "../context/ContextLeanguage";
+import AnimatedTextDeveloper from "./AnimatedTextDeveloper";
 type Props = {};
 
 const Profrile = (props: Props) => {
@@ -55,17 +56,20 @@ const Profrile = (props: Props) => {
             {/* Moldura Foto */}
 
             <h2 className="font-Teko font-bold text-white">
-              {" "}
-              <AnimatedText text="JHONATAS MATHEUS" />{" "}
+              <AnimatedText text="JHONATAS MATHEUS" />
             </h2>
             <h3 className="font-Teko font-bold text-white">
-              <AnimatedText
-                text={
-                  lenguage === "english"
-                    ? "Front-End Web Developer"
-                    : "Desenvolvedor Web Front-End"
-                }
+              <AnimatedTextDeveloper
+                text1="Front-End Web Developer"
+                text2="Desenvolvedor Web Front-End"
               />
+              {/* // <AnimatedText
+              //   text={
+              //     lenguage === "english"
+              //       ? "Front-End Web Developer"
+              //       : "Desenvolvedor Web Front-End"
+              //   }
+              // /> */}
             </h3>
             <div className="flex space-x-4 ">
               <Link href="https://www.instagram.com/jhonndev/" target="_blank">

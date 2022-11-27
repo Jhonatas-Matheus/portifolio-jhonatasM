@@ -41,7 +41,9 @@ const Modal = (props: Props) => {
           className="w-full md: w-[60%] self-center"
         />
         <p className="text-center px-4">{descriptionOfProject}</p>
-        <h3 className="text-center">Tecnologias:</h3>
+        <h3 className="text-center">
+          {lenguage === "english" ? "Technologies:" : "Tecnologias:"}
+        </h3>
         <p className="text-center px-4">{techsOfProject.join(", ")}</p>
 
         <span className=" text-center mt-4">

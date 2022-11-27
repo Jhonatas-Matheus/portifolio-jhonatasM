@@ -29,7 +29,11 @@ const LenguagesFlip = ({ className }: Props) => {
     <div onClick={switchLenguage} className={className}>
       <img
         id="testando"
-        src="/bandeira-brasil.jpg"
+        src={
+          lenguage === "english"
+            ? "/bandeira-estados-unidos.jpg"
+            : "/bandeira-brasil.jpg"
+        }
         alt="bandeira do brasil"
         className="w-[45%] rounded-full object-cover"
         ref={image}
