@@ -11,7 +11,7 @@ interface ILenguageContextValues {
 export const LenguageContext = createContext({} as ILenguageContextValues);
 
 export const LenguageProvider = ({ children }: ILenguageContextProps) => {
-  const [lenguage, setLenguage] = useState<string>("");
+  const [lenguage, setLenguage] = useState<string>("portuguese");
   return (
     <LenguageContext.Provider value={{ lenguage, setLenguage }}>
       {children}
