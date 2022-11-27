@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { useEffect, useRef } from "react";
 //Icons:
 import { TiHtml5 } from "react-icons/ti";
@@ -28,6 +28,7 @@ import { SectionContext } from "../context/ContextSection";
 //@ts-ignore eslint-disable-next-line
 import { curriculo } from "../assets/curriculo-jhonatas.pdf";
 import Link from "next/link";
+import { LenguageContext } from "../context/ContextLeanguage";
 type Props = {};
 
 const Techs = (props: Props) => {
@@ -36,6 +37,7 @@ const Techs = (props: Props) => {
   const [containerKey, setContainerKey] = useState<number>(0);
   const [sizeW, sizeH] = useWindowSize();
   const carouselTechs = useRef<any>(null);
+  const { lenguage, setLenguage } = useContext(LenguageContext);
   const { setCurrentSection } = React.useContext(SectionContext);
 
   useEffect(() => {
@@ -86,7 +88,9 @@ const Techs = (props: Props) => {
         data-aos="fade-right"
       >
         <div className="flex flex-col space-y-1 items-center text-white">
-          <h2 className="text-center">Tecnologias:</h2>
+          <h2 className="text-center">
+            {lenguage === "english" ? "Technologies" : "Tecnologias"}
+          </h2>
           <div className="border-solid border-b-2 border-color-primary w-10 min-h-2"></div>
           <div className="border-solid border-b-2 border-color-primary w-6 min-h-2"></div>
         </div>
@@ -154,7 +158,7 @@ const Techs = (props: Props) => {
           href="/curriculo-jhonatas.pdf"
           className="border border-white border-solid p-4"
         >
-          Download do currículo
+          {lenguage === "english" ? "Curriculum" : "Currículo"}
         </a>
       </div>
     </div>

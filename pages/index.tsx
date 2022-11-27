@@ -13,6 +13,8 @@ import { SectionContextProvider } from "../context/ContextSection";
 import Contact from "../components/Contact";
 import Modal from "../components/Modal";
 import ModalProvider from "../context/ContextModal";
+import Lenguages from "../components/Lenguages";
+import { LenguageProvider } from "../context/ContextLeanguage";
 
 export default function Home() {
   return (
@@ -22,14 +24,16 @@ export default function Home() {
       </Head>
       <SectionContextProvider>
         <ModalProvider>
-          <Modal />
-          <Navbar />
-          <Profrile />
-          <AboutMe />
-          <Techs />
-          <Skill />
-          <Projects />
-          {/* <Contact /> */}
+          <LenguageProvider>
+            <Modal />
+            <Navbar />
+            <Profrile />
+            <AboutMe />
+            <Techs />
+            <Skill />
+            <Projects />
+            {/* <Contact /> */}
+          </LenguageProvider>
         </ModalProvider>
       </SectionContextProvider>
     </>
