@@ -61,11 +61,12 @@ const AboutMe = (props: Props) => {
       {lenguage === "english" ? (
         <p className="text-white mt-4 text-justify max-w-full ">
           <span className="text-color-primary">Hi, my name is Jhonatas. </span>
-          Since I was a child, I've been passionate about the world of computing
-          and, as I've always been curious, around the age of 18 I started to
-          study programming, an area that I fell in love with and continue to
-          follow a professional career. I am a communicative and proactive
-          person, I always seek to improve my knowledge, I see everything as an
+          Since I was a child, I<q />
+          ve been passionate about the world of computing and, as I<q />
+          ve always been curious, around the age of 18 I started to study
+          programming, an area that I fell in love with and continue to follow a
+          professional career. I am a communicative and proactive person, I
+          always seek to improve my knowledge, I see everything as an
           opportunity for evolution and I seek to add to the maximum in the
           environments in which I am inserted.
         </p>
