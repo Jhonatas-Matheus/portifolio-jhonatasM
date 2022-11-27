@@ -5,6 +5,8 @@ import avatar from "../assets/avatar.png";
 import {
   GrInstagram,
   GrFacebookOption,
+  GrMail,
+  GrMailOption,
   GrGithub,
   GrLinkedinOption,
 } from "react-icons/gr";
@@ -71,12 +73,9 @@ const Profrile = (props: Props) => {
                   <GrInstagram />
                 </div>
               </Link>
-              <Link
-                href="https://api.whatsapp.com/send/?phone=5584999336921&text&type=phone_number&app_absent=0"
-                target="_blank"
-              >
+              <Link href="mailto:jmdevbr@gmail.com">
                 <div className="cursor-pointer duration-200 border-solid border-white text-white border-2 rounded-full p-2 hover:border-color-primary hover:text-color-primary">
-                  <IoLogoWhatsapp />
+                  <GrMail />
                 </div>
               </Link>
               <Link href="https://github.com/Jhonatas-Matheus" target="_blank">
