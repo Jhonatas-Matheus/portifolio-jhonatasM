@@ -13,6 +13,7 @@ import {
   TbBrandFirebase,
   TbBrandDocker,
 } from "react-icons/tb";
+import { SiTypescript } from "react-icons/si";
 import { DiNodejs } from "react-icons/di";
 import { IoLogoNodejs } from "react-icons/io";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
@@ -117,6 +118,13 @@ const Techs = (props: Props) => {
               <div className="flex flex-col items-center">
                 <h3 className="whitespace-nowrap">JavaScript</h3>
                 <TbBrandJavascript size={50} className="text-color-primary" />
+              </div>
+              <div className="flex flex-col items-center">
+                <h3 className="whitespace-nowrap">TypeScript</h3>
+                <SiTypescript
+                  size={40}
+                  className="text-color-primary mt-[0.35rem]"
+                />
               </div>
               <div className="flex flex-col items-center">
                 <h3 className="whitespace-nowrap">ReactJS</h3>
